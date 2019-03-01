@@ -1,5 +1,5 @@
 /*!
- * ColorBox est une maintenance du code original de 
+ * ColorBox est une maintenance du code original de
  * Lightbox v2.10.0 par Lokesh Dhakar
  *
  * More info:
@@ -123,6 +123,12 @@
       bottom: parseInt(this.$image.css('border-bottom-width'), 10),
       left: parseInt(this.$image.css('border-left-width'), 10)
     };
+
+    //Debut maintenance Simon DRIEUX
+    this.$outerContainer.css('border-radius', 30)
+    this.$container.css('border-radius', 30)
+    this.$image.css('border-radius', 30)
+    //Fin maintenance Simon DRIEUX
 
     // Attach event handlers to the newly minted DOM elements
     this.$overlay.hide().on('click', function() {
