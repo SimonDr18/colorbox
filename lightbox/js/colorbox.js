@@ -61,7 +61,8 @@
     If the caption data is user submitted or from some other untrusted source, then set this to true
     to prevent xss and other injection attacks.
      */
-    sanitizeTitle: false
+    sanitizeTitle: false,
+    roundCorner: 0
   };
 
   Lightbox.prototype.option = function(options) {
@@ -125,9 +126,9 @@
     };
 
     //Debut maintenance Simon DRIEUX
-    this.$outerContainer.css('border-radius', 30)
-    this.$container.css('border-radius', 30)
-    this.$image.css('border-radius', 30)
+    this.$outerContainer.css('border-radius', this.option.roundCorner)
+    this.$container.css('border-radius', this.option.roundCorner)
+    this.$image.css('border-radius', this.option.roundCorner)
     //Fin maintenance Simon DRIEUX
 
     // Attach event handlers to the newly minted DOM elements
